@@ -1,6 +1,12 @@
 # values.conf
 ## Description
 values.conf is the primary configuration file for the scripts contained within the repository. It defines many of the features and characteristics of the script.
+## Limitations and Bugs
+ - Unlike a proper config file, values.conf is implemented like a shell script with the syntax "source values.conf".
+   - This means that the configuration is executed, not read.
+     - This allows for code to be imbeded in the config file, but it also can lead to config syntax errors breaking the rest of the script.
+   - Options to improve this are limited, since implementing JSON, YAML, or other configuration file support in bash is quite technically challenging, and licensing issues prevent pulling from open-source implementations of these features.
+ - values.conf requires variable names before fields, as well as equal signs. These would ideally be replaced with colons. (Example: "user=example" would become "user: example")
 ## Values and Settings
 ### User Access
  - userid (Integer)
