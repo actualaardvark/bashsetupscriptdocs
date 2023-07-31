@@ -13,3 +13,5 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 source values.conf
 ```
  - Using source to import values.conf is not ideal, since it executes the config file rather than reads it.
+ ### Lacking Error Handling
+ - Improved error handling would make debugging significantly easier.
